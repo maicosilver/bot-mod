@@ -2,7 +2,7 @@ const donasi = () => {
 	return `
 
 ┏━━━━━━━━━━━━━━━━━━━━
-┃          nao da pra doar pro bruxinho
+┃          nao da pra doar 
 ┣━━━━━━━━━━━━━━━━━━━━
 
 `
