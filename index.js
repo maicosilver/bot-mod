@@ -437,7 +437,7 @@ case 'lofi':
 							.toFormat('webp')
 							.save(ran)
 					} else {
-						reply(`sapoha ${prefix}sticker e pra fazer fig cm foto/gif burro`)
+						reply(`sapoha ${prefix}sticker é pra fazer fig cm foto/gif burro`)
 					}
 					break
 				case 'gtts':	
