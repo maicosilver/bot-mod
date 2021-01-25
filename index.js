@@ -48,9 +48,9 @@ const arrayBulan = ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Jul
 const bulan = arrayBulan[moment().format('MM') - 1]
 const config = {
     XBOT: 'ᏴϴͲ ᎠO BRUXINHO', 
-    instagram: 'https://www.instagram.com/kaic_de_paula?r=nametag', 
-    nomer: 'wa.me/558298050470',
-    youtube: 'https://youtube.com/channel/UC2a7N-vZ5xrDF-0nfcaUspw', 
+    instagram: 'https://www.instagram.com/', 
+    nomer: 'wa.me/559876543210',
+    youtube: 'https://youtube.com/', 
     whatsapp: 'Comming soon', 
     tanggal: `TANGGAL: ${moment().format('DD')} ${bulan} ${moment().format('YYYY')}`,
     waktu: time
@@ -152,23 +152,23 @@ client.on('group-participants-update', async (anu) => {
 			const isCmd = body.startsWith(prefix)
 
 			mess = {
-				wait: '❬❗❭AGUARDE  UM POUCO MANO❬❗❭',
-				success: '️❬ ✔ ❭ PRONTO SEU GAY 🖤',
+				wait: 'AGUARDE  UM POUCO MANO...',
+				success: '️✅PRONTO!',
 				error: {
 					stick: 'Eu falhei :( desculpa',
 					Iv: 'Desculpe, o link está inválido☹️'
 				},
 				only: {
-					group: '❬❗❭ COMANDO SÓ PODE SER EXECUTADO EM GRUPOS❬❗❭ ',
-					ownerG: '❬❗❭ COMANDO EXCLUSIVO PARA O PROPRIETÁRIO DO BOT.❬❗❭ ',
-					ownerB: '❬❗❭  COMANDO EXCLUSIVO PARA O PROPRIETÁRIO DO BOT.❬❗❭  ',
-					admin: ' ❬ ⚠️ ❭ COMANDO PERMITIDO SOMENTE PARA ADMS ❬ ⚠️ ❭ ',
-					Badmin: '❬❗❭O BOT PRECISA SER ADEMAR ;3 '
+					group: 'COMANDO SÓ PODE SER EXECUTADO EM GRUPOS! ',
+					ownerG: 'COMANDO EXCLUSIVO PARA O PROPRIETÁRIO DO BOT! ',
+					ownerB: 'COMANDO EXCLUSIVO PARA O PROPRIETÁRIO DO BOT!  ',
+					admin: ' ⚠️ COMANDO SOMENTE PARA ADMS ⚠️ ',
+					Badmin: 'O BOT PRECISA SER ADM! :/ '
 				}
 			}
 
 			const botNumber = client.user.jid
-			const ownerNumber = ["5511973027044@s.whatsapp.net"] 
+			const ownerNumber = ["559876543210@s.whatsapp.net"] 
 			const isGroup = from.endsWith('@g.us')
 			const sender = isGroup ? mek.participant : mek.key.remoteJid
 			const groupMetadata = isGroup ? await client.groupMetadata(from) : ''
@@ -272,8 +272,8 @@ case 'lofi':
                          text: teks1,
                          contextInfo: {mentionedJid: [nomor]},
                      }
-                    client.sendMessage('5511973027044@s.whatsapp.net', options, text, {quoted: mek})
-                    reply('PDP PARSA, BUG FOI REPORTADO, SE FOR MENTIRA VAI SER COBRADO🙄✌🏼')
+                    client.sendMessage('559876543210@s.whatsapp.net', options, text, {quoted: mek})
+                    reply('BUG FOI REPORTADO, SE FOR MENTIRA VAI SER COBRADO')
                     break
 					case 'marcar':
 					members_id = []
@@ -476,7 +476,7 @@ case 'lofi':
 				case 'tiktokstalk':
 				case 'tiktokperfil':
 					try {
-						if (args.length < 1) return client.sendMessage(from, 'qual nome da pessoa????', text, {quoted: mek})
+						if (args.length < 1) return client.sendMessage(from, 'qual nome da pessoa?', text, {quoted: mek})
 						let { user, stats } = await tiktod.getUserProfileInfo(args[0])
 						reply(mess.wait)
 						teks = `*ID* : ${user.id}\n*nome* : ${user.uniqueId}\n*Nick* : ${user.nickname}\n*seguidores* : ${stats.followerCount}\n*seguindo* : ${stats.followingCount}\n*posts da conta* : ${stats.videoCount}\n*Luv* : ${stats.heart}\n`
@@ -489,7 +489,7 @@ case 'lofi':
 					break
 				case 'clearall':
 				case 'limpar':
-					if (!isOwner) return reply(' quem e tu?')
+					if (!isOwner) return reply(' quem é tu?')
 					anu = await client.chats.all()
 					client.setMaxListeners(25)
 					for (let _ of anu) {
