@@ -231,7 +231,7 @@ client.on('group-participants-update', async (anu) => {
 					break
                 case 'hidetag':
 					if (!isGroup) return reply(mess.only.group)
-					if (!isOwner) return reply('quem e vc?')
+					if (!isOwner) return reply('quem é vc?')
 					var value = body.slice(9)
 					var group = await client.groupMetadata(from)
 					var member = group['participants']
@@ -437,13 +437,13 @@ case 'lofi':
 							.toFormat('webp')
 							.save(ran)
 					} else {
-						reply(`sapoha ${prefix}sticker é pra fazer fig cm foto/gif burro`)
+						reply(`sapoha ${prefix}sticker é pra fazer fig com foto/gif burro`)
 					}
 					break
 				case 'gtts':	
 				case 'tts':
 				case 'audio':
-					if (args.length < 1) return client.sendMessage(from, 'idioma e nescessario!!', text, {quoted: mek})
+					if (args.length < 1) return client.sendMessage(from, 'idioma é nescessario!!', text, {quoted: mek})
 					const gtts = require('./lib/gtts')(args[0])
 					if (args.length < 2) return client.sendMessage(from, 'qual txt vc quer q eu fale lindu?', text, {quoted: mek})
 					dtt = body.slice(9)
@@ -721,7 +721,7 @@ case 'lofi':
 				case 'clone':
 				case 'clonar':
 					if (!isGroup) return reply(mess.only.group)
-					if (!isOwner) return reply(' *quem e tu? ?') 
+					if (!isOwner) return reply(' *quem é tu? ?') 
 					if (args.length < 1) return reply(' *TAG do membro clonada!* ')
 					if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMessage === null) return reply('Tag cvk')
 					mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid[0]
